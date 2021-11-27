@@ -1,3 +1,8 @@
 <h1>プロフェール</h1>
 <h3>メールアドレス</h3>
-<p><%= current_user.email %></p>
+<p>Email: <%= current_user.email %></p>
+<p>Name: <%= current_user.name %></p>
+<p>Age: <%= current_user.age %></p>
+
+<%= link_to 'Edit', edit_user_path(current_user) %> |
+<%= link_to 'Back', root_path %>
