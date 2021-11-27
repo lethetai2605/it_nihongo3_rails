@@ -1,8 +1,10 @@
 <h1>プロフェール</h1>
 <h3>メールアドレス</h3>
-<p>Email: <%= current_user.email %></p>
-<p>Name: <%= current_user.name %></p>
-<p>Age: <%= current_user.age %></p>
-
+<p>Email: <%= @user.email %></p>
+<p>Name: <%= @user.name %></p>
+<p>Age: <%= @user.age %></p>
+<p>
+  <%= image_tag current_user.avatar if @user.avatar.attached? %>
+</p>
 <%= link_to 'Edit', edit_user_path(current_user) %> |
 <%= link_to 'Back', root_path %>

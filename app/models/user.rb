@@ -6,4 +6,5 @@ class User < ApplicationRecord
          
   validates :name, presence: true
   validates :age, numericality: { only_integer: true }
+  has_one_attached :avatar
 end
