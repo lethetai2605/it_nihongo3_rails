@@ -22,6 +22,11 @@
   </div>
 
   <div class="field">
+    <%= form.label :detail %>
+    <%= form.text_area(:detail, size: '30x5') %>
+  </div>
+
+  <div class="field">
     <%= form.label :Image %>
     <%= form.file_field :image %>
   </div>
