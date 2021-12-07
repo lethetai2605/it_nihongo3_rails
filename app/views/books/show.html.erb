@@ -17,5 +17,16 @@
   <%= image_tag @book.image if @book.image.attached? %>
 </p>
 
+<p>Review From</p>
+ <%= form_with(model: @book_review, local: true) do |form| %>
+   <div class= "field">
+     <%= form.text_area :review %>
+     <%= form.hidden_field :book_id, :value => @book.id %>
+   </div>
+   <div class="actions">
+     <%= form.submit %>
+   </div>
+ <% end %>
+ 
 <%= link_to 'Edit', edit_book_path(@book) %> |
 <%= link_to 'Back', books_path %>
