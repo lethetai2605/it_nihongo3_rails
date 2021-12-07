@@ -1,6 +1,6 @@
 class BookReviewsController < ApplicationController
   before_action :set_book_review, only: %i[ show edit update destroy ]
-
+  before_action :authenticate_user!
   # GET /book_reviews or /book_reviews.json
   def index
     @book_reviews = BookReview.all
